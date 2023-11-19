@@ -18,6 +18,7 @@ CREATE TABLE posts (
   `imgdata` mediumblob NOT NULL,
   `body` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  KEY `created_at_index` (`created_at` DESC)
 ) DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS comments;
