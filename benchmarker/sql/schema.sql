@@ -27,4 +27,5 @@ CREATE TABLE comments (
   `user_id` int NOT NULL,
   `comment` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  KEY `post_id_created_at_index` (`post_id`,`created_at` DESC)
 ) DEFAULT CHARSET=utf8mb4;
