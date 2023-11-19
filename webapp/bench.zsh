@@ -14,4 +14,4 @@ echo "START BENCHMARK"
 docker run --rm --network host -i private-isu-benchmarker /opt/go/bin/benchmarker -t http://host.docker.internal -u /opt/go/userdata
 
 ./pt-query-digest log/mysql-slow.log > ./log/query-digest.sql
-alp json --reverse --sort sum --file ./log/access.log > ./log/access-digest.log
+alp json --reverse --matching-groups "/image/.*(jpg|png),/posts/[0-9]+,/@[a-z]+" --sort sum --file ./log/access.log > ./log/access-digest.log
